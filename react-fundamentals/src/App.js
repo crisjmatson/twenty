@@ -32,7 +32,7 @@ function App() {
 			</Jumbotron>
 			<Nasa />
 			<OpenWeather lat={lat} lon={lon} />
-			<ZomatoApp lat={lat} lon={lon} />
+			<Zomato lat={lat} lon={lon} />
 		</div>
 	);
 }
