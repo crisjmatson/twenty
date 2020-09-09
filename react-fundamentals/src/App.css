@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.mainJumbo {
+  background-image: url("https://source.unsplash.com/1600x900/?pattern,cloud");
+	background-color: #fdfdfdde;
+  background-blend-mode: screen;
+  color: rgba(0, 0, 0, 0.644);
+}
