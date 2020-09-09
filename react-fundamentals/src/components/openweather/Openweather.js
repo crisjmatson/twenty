@@ -6,7 +6,6 @@ import {
 	Button,
 	ButtonDropdown,
 	DropdownToggle,
-	Card,
 } from "reactstrap";
 const base = "http://api.openweathermap.org/data/2.5/weather";
 const key = "fa3d2da352ac2f3a043c92d63aff4a5b";

@@ -15,8 +15,7 @@ function App() {
 		} else {
 			alert("Geolocation is not supported by this browser.");
 		}
-
-	}, ['']);
+	}, [""]);
 
 	const getCoord = (position) => {
 		setLat(position.coords.latitude);
@@ -24,9 +23,9 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div class="App">
 			<Jumbotron fluid className="mainJumbo">
-				<Container fluid className="mainJumbo">
+				<Container fluid>
 					<h1>you are here.</h1>
 				</Container>
 			</Jumbotron>
@@ -37,17 +36,12 @@ function App() {
 			</Jumbotron>
     
 			<OpenWeather lat={lat} lon={lon} />
-<<<<<<< HEAD
-			<Zomato lat={lat} lon={lon} />
-=======
 
 			<Jumbotron fluid className="zomatoJumbo">
 				<Container fluid className="zomatoJumbo">
 					<ZomatoApp lat={lat} lon={lon} />
 				</Container>
 			</Jumbotron>
-
->>>>>>> 9af7331eef9188392d7db911bd813c52f38f94d3
 		</div>
 	);
 }
