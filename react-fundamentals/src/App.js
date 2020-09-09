@@ -15,7 +15,7 @@ function App() {
 		} else {
 			alert("Geolocation is not supported by this browser.");
 		}
-	});
+	}, [""]);
 
 	const getCoord = (position) => {
 		setLat(position.coords.latitude);
@@ -23,7 +23,7 @@ function App() {
 	};
 
 	return (
-		<div>
+		<div class="App">
 			<Jumbotron fluid className="mainJumbo">
 				<Container fluid className="mainJumbo">
 					<h1>you are here.</h1>
