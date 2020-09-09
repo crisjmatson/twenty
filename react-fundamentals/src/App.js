@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
 import OpenWeather from "./components/openweather/Openweather";
-import Zomato from "./components/zomato/Zomato";
+import Zomato from "./components/zomato/ZomatoApp";
 
 function App() {
 	const [lat, setLat] = useState(0);
@@ -15,7 +15,8 @@ function App() {
 		} else {
 			alert("Geolocation is not supported by this browser.");
 		}
-	});
+
+	}, ['']);
 
 	const getCoord = (position) => {
 		setLat(position.coords.latitude);
@@ -31,7 +32,7 @@ function App() {
 			</Jumbotron>
 			<Nasa />
 			<OpenWeather lat={lat} lon={lon} />
-			<Zomato />
+			<ZomatoApp lat={lat} lon={lon} />
 		</div>
 	);
 }
