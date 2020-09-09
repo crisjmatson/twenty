@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Jumbotron, Container } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
 import OpenWeather from "./components/openweather/Openweather";
 import Zomato from "./components/zomato/ZomatoApp";
 
-
 function App() {
-
 	const [lat, setLat] = useState(0);
 	const [lon, setLon] = useState(0);
 	useEffect(() => {
@@ -16,6 +15,7 @@ function App() {
 		} else {
 			alert("Geolocation is not supported by this browser.");
 		}
+
 	}, ['']);
 
 	const getCoord = (position) => {
@@ -24,11 +24,15 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			PAGE HEADER
+		<div>
+			<Jumbotron fluid className="mainJumbo">
+				<Container fluid>
+					<h1>you are here.</h1>
+				</Container>
+			</Jumbotron>
 			<Nasa />
 			<OpenWeather lat={lat} lon={lon} />
-			<Zomato lat={lat} lon={lon} />
+			<ZomatoApp lat={lat} lon={lon} />
 		</div>
 	);
 }
