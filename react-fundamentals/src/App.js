@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
 import OpenWeather from "./components/openweather/Openweather";
-import Zomato from "./components/zomato/ZomatoApp";
+import ZomatoApp from "./components/zomato/ZomatoApp";
 
 function App() {
 	const [lat, setLat] = useState(0);
@@ -26,13 +26,28 @@ function App() {
 	return (
 		<div>
 			<Jumbotron fluid className="mainJumbo">
-				<Container fluid>
+				<Container fluid className="mainJumbo">
 					<h1>you are here.</h1>
 				</Container>
 			</Jumbotron>
-			<Nasa />
+			<Jumbotron fluid className="nasaJumbo">
+				<Container fluid className="nasaJumbo">
+					<Nasa lat={lat} lon={lon} />
+				</Container>
+			</Jumbotron>
+    
 			<OpenWeather lat={lat} lon={lon} />
+<<<<<<< HEAD
 			<Zomato lat={lat} lon={lon} />
+=======
+
+			<Jumbotron fluid className="zomatoJumbo">
+				<Container fluid className="zomatoJumbo">
+					<ZomatoApp lat={lat} lon={lon} />
+				</Container>
+			</Jumbotron>
+
+>>>>>>> 9af7331eef9188392d7db911bd813c52f38f94d3
 		</div>
 	);
 }
