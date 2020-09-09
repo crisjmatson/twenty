@@ -5,6 +5,7 @@ import Nasa from "./components/nasa/Nasa";
 import OpenWeather from "./components/openweather/Openweather";
 import Zomato from "./components/zomato/ZomatoApp";
 
+
 function App() {
 
 	const [lat, setLat] = useState(0);
